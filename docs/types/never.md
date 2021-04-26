@@ -1,6 +1,7 @@
 # Never
+> [Youtube: Video lesson on the never type](https://www.youtube.com/watch?v=aldIFYWu6xc)
 
-> [A video lesson on the never type](https://egghead.io/lessons/typescript-use-the-never-type-to-avoid-code-with-dead-ends-using-typescript)
+> [Egghead: Video lesson on the never type](https://egghead.io/lessons/typescript-use-the-never-type-to-avoid-code-with-dead-ends-using-typescript)
 
 Programming language design does have a concept of *bottom* type that is a **natural** outcome as soon as you do *code flow analysis*. TypeScript does *code flow analysis* (😎) and so it needs to reliably represent stuff that might never happen.
 
@@ -21,7 +22,7 @@ However, *only `never` can be assigned to another never*. e.g.
 let foo: never = 123; // Error: Type number is not assignable to never
 
 // Okay as the function's return type is `never`
-let bar: never = (() => { throw new Error('Throw my hands in the air like I just dont care') })();
+let bar: never = (() => { throw new Error(`Throw my hands in the air like I just don't care`) })();
 ```
 
 Great. Now let's just jump into its key use case :)
@@ -73,7 +74,7 @@ const failExpression = function(message: string) {
 };
 ```
 
-Ofcourse you can fix it by an explict annotation: 
+Of course you can fix it by an explict annotation: 
 
 ```ts
 function failDeclaration(message: string): never {

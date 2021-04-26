@@ -5,7 +5,7 @@ An `Object` in JavaScript (and hence TypeScript) can be accessed with a **string
 Here is a quick example:
 
 ```ts
-let foo:any = {};
+let foo: any = {};
 foo['Hello'] = 'World';
 console.log(foo['Hello']); // World
 ```
@@ -20,7 +20,7 @@ class Foo {
   }
 }
 
-let foo:any = {};
+let foo: any = {};
 foo['Hello'] = new Foo('World');
 foo['Hello'].log(); // World
 ```
@@ -35,7 +35,7 @@ let obj = {
   }
 }
 
-let foo:any = {};
+let foo: any = {};
 foo[obj] = 'World'; // toString called
 console.log(foo[obj]); // toString called, World
 console.log(foo['Hello']); // World
@@ -63,7 +63,7 @@ let obj = {
   }
 }
 
-let foo:any = {};
+let foo: any = {};
 
 // ERROR: the index signature must be string, number ...
 foo[obj] = 'World';
@@ -76,7 +76,7 @@ The reason for forcing the user to be explicit is because the default `toString`
 
 ```ts
 let obj = {message:'Hello'}
-let foo:any = {};
+let foo: any = {};
 
 // ERROR: the index signature must be string, number ...
 foo[obj] = 'World';
@@ -301,7 +301,7 @@ type FormState =
   & { [fieldName: string]: FieldState }
 
 
-// Use it for some JavaScript object you are gettting from somewhere 
+// Use it for some JavaScript object you are getting from somewhere 
 declare const foo:FormState; 
 
 const isValidBool = foo.isValid;

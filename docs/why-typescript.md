@@ -41,7 +41,7 @@ TypeScript uses postfix type annotations popular in other *optionally* annotated
 ```ts
 var foo: number = 123;
 ```
-So if you do something wrong the compiler will error e.g.:
+So if you do something wrong the compiler will report an error e.g.:
 
 ```ts
 var foo: number = '123'; // Error: cannot assign a `string` to a `number`
@@ -141,7 +141,7 @@ var inc = x => x+1;
 In this section we have provided you with the motivation and design goals of TypeScript. With this out of the way we can dig into the nitty gritty details of TypeScript.
 
 [](Interfaces are open ended)
-[](Type Inferernce rules)
+[](Type Inference rules)
 [](Cover all the annotations)
 [](Cover all ambients : also that there are no runtime enforcement)
 [](.ts vs. .d.ts)
